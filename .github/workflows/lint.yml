@@ -1,0 +1,5 @@
+name: linter
+
+on: push
+
+uses: "make lint"
