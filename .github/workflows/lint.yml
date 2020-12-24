@@ -2,4 +2,5 @@ name: linter
 
 on: push
 
-uses: "make lint"
+jobs: 
+ run: make lint
