@@ -1,6 +1,11 @@
 name: linter
 
-on: push
+on: [push]
 
-jobs: 
- run: make lint
+jobs:
+  my_testing:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: liter
+      run: make lint
