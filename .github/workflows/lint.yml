@@ -1,11 +1,11 @@
 name: linter
 
-on: [push]
+on: push
 
 jobs:
   my_testing:
-    runs-on: ubuntu-latest
+    runs-on: macos-11.0
 
     steps:
-    - name: liter
-      run: make lint
+      - name: liter
+        run: npx eslint cd
