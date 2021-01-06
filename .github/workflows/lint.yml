@@ -8,7 +8,7 @@ jobs:
 
     steps:
       - name: Git clone my repo
-        uses: actions/checkout@v1
+        uses: actions/checkout@v2
 
       - name: make lint
         run: make lint
