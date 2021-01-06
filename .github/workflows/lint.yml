@@ -5,5 +5,8 @@ on: push
 jobs:
   my_testing:
     runs-on: ubuntu-latest
+
     steps:
-      - run: make lint
+      - uses: actions/checkout@v1
+      - name: make lint
+        run: make lint
