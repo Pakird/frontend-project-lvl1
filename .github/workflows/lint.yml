@@ -4,8 +4,6 @@ on: push
 
 jobs:
   my_testing:
-    runs-on: macos-11.0
-
+    runs-on: ubuntu-latest
     steps:
-      - name: liter
-        run: npx eslint cd
+      - run: make lint
