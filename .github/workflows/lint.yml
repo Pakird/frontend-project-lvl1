@@ -10,5 +10,7 @@ jobs:
       - name: Git clone my repo
         uses: actions/checkout@v2
 
+
       - name: make lint
+        run: npm ci
         run: make lint
