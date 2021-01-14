@@ -9,4 +9,5 @@ jobs:
       - name: repository
         uses: actions/checkout@v2
         uses: actions/setup-node@v1
+      - name: linter
         run: make lint
