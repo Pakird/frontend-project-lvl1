@@ -10,5 +10,4 @@ jobs:
       - name: make lint
         uses: actions/checkout@v2
         uses: actions/setup-node@v1
-        uses: /home/runner/work/frontend-project-lvl1/frontend-project-lvl1/.eslintrc.yml
         run: make lint
