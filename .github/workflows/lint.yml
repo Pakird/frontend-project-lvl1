@@ -7,10 +7,8 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Git clone my repo
-        uses: actions/checkout@v2
-
-
       - name: make lint
-        run: npm ci
+        uses: actions/checkout@v2
+        uses: actions/setup-node@v1
+        uses: /home/runner/work/frontend-project-lvl1/frontend-project-lvl1/.eslintrc.yml
         run: make lint
