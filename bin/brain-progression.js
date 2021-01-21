@@ -18,8 +18,8 @@ const game = () => {
     const firstNumber = getRandom(0, 51);
     const difference = getRandom(2, 20);
     const progression = [firstNumber];
-    for (let i = 1; i < 10; i += 1) {
-      progression[i] = progression[i - 1] + difference;
+    for (let j = 1; j < 10; j += 1) {
+      progression[j] = progression[j - 1] + difference;
     }
     const partProgression = [...progression];
     partProgression[lostNumber] = '..';
