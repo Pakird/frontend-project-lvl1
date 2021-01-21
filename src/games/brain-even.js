@@ -1,6 +1,6 @@
 import readLineSync from 'readline-sync';
 
-export const game = () => {
+export default () => {
   const getRandom = (begin, end) => {
     const min = Math.ceil(begin);
     const max = Math.floor(end);
@@ -27,4 +27,3 @@ export const game = () => {
   }
   console.log(`Congratulations, ${name}!`);
 };
-game();

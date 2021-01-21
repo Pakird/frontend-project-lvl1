@@ -1,25 +1,24 @@
-#!/usr/bin/env node
 import readLineSync from 'readline-sync';
 
-const getRandom = (begin, end) => {
-  const min = Math.ceil(begin);
-  const max = Math.floor(end);
-  return Math.floor(Math.random() * (max - min)) + min;
-};
-
-const isPrime = (number) => {
-  if (number < 2) {
-    return 'no';
-  }
-  for (let i = 2; i <= number / 2; i += 1) {
-    if (number % i === 0) {
+export default () => {
+  const getRandom = (begin, end) => {
+    const min = Math.ceil(begin);
+    const max = Math.floor(end);
+    return Math.floor(Math.random() * (max - min)) + min;
+  };
+  
+  const isPrime = (number) => {
+    if (number < 2) {
       return 'no';
     }
-  }
-  return 'yes';
-};
+    for (let i = 2; i <= number / 2; i += 1) {
+      if (number % i === 0) {
+        return 'no';
+      }
+    }
+    return 'yes';
+  };
 
-const game = () => {
   console.log('Welcome to the Brain Games!');
   const name = readLineSync.question('May I have your name? ');
   console.log(`Hello ${name}!`);
@@ -40,4 +39,3 @@ const game = () => {
   }
   console.log(`Congratulations, ${name}!`);
 };
-game();

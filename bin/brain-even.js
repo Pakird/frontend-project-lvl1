@@ -1,5 +1,4 @@
 #!/usr/bin/env node
-
-const { game } = require("../src/games/brain-even");
+import game from '../src/games/brain-even.js';
 
 game();
