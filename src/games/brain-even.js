@@ -1,14 +1,14 @@
-#!/usr/bin/env node
 import readLineSync from 'readline-sync';
 
-const getRandom = (begin, end) => {
-  const min = Math.ceil(begin);
-  const max = Math.floor(end);
-  return Math.floor(Math.random() * (max - min)) + min;
-};
-const isEven = (num) => (num % 2 === 0 ? 'yes' : 'no');
+export const game = () => {
+  const getRandom = (begin, end) => {
+    const min = Math.ceil(begin);
+    const max = Math.floor(end);
+    return Math.floor(Math.random() * (max - min)) + min;
+  };
 
-const game = () => {
+  const isEven = (num) => (num % 2 === 0 ? 'yes' : 'no');
+
   console.log('Welcome to the Brain Games!');
   const name = readLineSync.question('May I have your name? ');
   console.log(`Hello ${name}!`);

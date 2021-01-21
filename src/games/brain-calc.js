@@ -1,11 +1,10 @@
-#!/usr/bin/env node
 import readLineSync from 'readline-sync';
 
 export const game = () => {
   const getRandom = (begin, end) => {
-  const min = Math.ceil(begin);
-  const max = Math.floor(end);
-  return Math.floor(Math.random() * (max - min)) + min;
+    const min = Math.ceil(begin);
+    const max = Math.floor(end);
+    return Math.floor(Math.random() * (max - min)) + min;
   };
   console.log('Welcome to the Brain Games!');
   const name = readLineSync.question('May I have your name? ');
