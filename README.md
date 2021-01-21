@@ -1,6 +1,9 @@
 ### Hexlet tests and linter status:
 
-GH Actions badge: https://github.com/Pakird/frontend-project-lvl1/workflows/linter/badge.svg
+CodeClimate: [![Maintainability](https://api.codeclimate.com/v1/badges/71b6d146d6420c09482e/maintainability)](https://codeclimate.com/github/Pakird/frontend-project-lvl1/maintainability),
+[![Test Coverage](https://api.codeclimate.com/v1/badges/71b6d146d6420c09482e/test_coverage)](https://codeclimate.com/github/Pakird/frontend-project-lvl1/test_coverage)
+
+GH Actions badge: https://github.com/Pakird/frontend-project-lvl1/workflows/linter/badge.svg;
 
 brain-even.js https://asciinema.org/a/p7N7sscThXUKJW96Je9ZG9phI;
 
