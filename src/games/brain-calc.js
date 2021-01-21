@@ -17,7 +17,14 @@ export default () => {
     const operand1 = getRandom(1, 100);
     const operand2 = getRandom(1, 100);
     const operation = `${operand1} ${operator} ${operand2}`;
-    const result = eval(operation);
+    let result = '';
+    if (operator === '+') {
+      result = operand1 + operand2;
+    } else if (operator === '-') {
+      result = operand1 - operand2;
+    } else {
+      result = operand1 * operand2;
+    }
 
     console.log(`Question: ${operation}`);
     const answer = readLineSync.question('Your answer: ');
