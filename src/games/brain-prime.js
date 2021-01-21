@@ -1,4 +1,4 @@
-#!/usr/bin/env node
+/*#!/usr/bin/env node
 import readLineSync from 'readline-sync';
 
 const getRandom = (begin, end) => {
@@ -40,3 +40,4 @@ const game = () => {
   console.log(`Congratulations, ${name}!`);
 };
 game();
+*/
