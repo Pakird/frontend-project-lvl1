@@ -25,7 +25,7 @@ const game = () => {
     const gcd = greatestCommonDivisor(randomNum1, randomNum2);
 
     console.log(`Question: ${randomNum1} ${randomNum2}`);
-    const answer = readLineSync.question("Your answer: ");
+    const answer = readLineSync.question('Your answer: ');
     if (Number(answer) === gcd) {
       console.log('Correct!');
     } else {

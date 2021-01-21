@@ -1,3 +1,4 @@
+/*
 #!/usr/bin/env node
 import readLineSync from 'readline-sync';
 
@@ -24,3 +25,4 @@ const game = () => {
   }
   console.log(`Congratulations, ${name}!`);
 };
+*/
