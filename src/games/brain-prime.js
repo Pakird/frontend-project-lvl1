@@ -6,7 +6,6 @@ export default () => {
     const max = Math.floor(end);
     return Math.floor(Math.random() * (max - min)) + min;
   };
-  
   const isPrime = (number) => {
     if (number < 2) {
       return 'no';
