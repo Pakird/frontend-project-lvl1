@@ -1,20 +1,20 @@
 #!/usr/bin/env node
-import readLineSync from "readline-sync";
+import readLineSync from 'readline-sync';
 
-const getRandom = (min, max) => {
-  min = Math.ceil(min);
-  max = Math.floor(max);
+const getRandom = (begin, end) => {
+  const min = Math.ceil(begin);
+  const max = Math.floor(end);
   return Math.floor(Math.random() * (max - min)) + min;
 };
 
 const game = () => {
-  console.log("Welcome to the Brain Games!");
-  const name = readLineSync.question("May I have your name? ");
+  console.log('Welcome to the Brain Games!');
+  const name = readLineSync.question('May I have your name? ');
   console.log(`Hello ${name}!`);
-  console.log("What is the result of the expression?"); //task
+  console.log('What is the result of the expression?');
 
   for (let i = 1; i < 4; i += 1) {
-    const operators = ["+", "-", "*"];
+    const operators = ['+', '-', '*'];
     const operator = operators[getRandom(0, 3)];
     const operand1 = getRandom(1, 100);
     const operand2 = getRandom(1, 100);
@@ -22,10 +22,10 @@ const game = () => {
     const result = eval(operation);
 
     console.log(`Question: ${operation}`);
-    const answer = readLineSync.question("Your answer: ");
+    const answer = readLineSync.question('Your answer: ');
 
     if (Number(answer) === result) {
-      console.log("Correct!");
+      console.log('Correct!');
     } else {
       console.log(
         `${answer} is wrong answer ;(. Correct answer was ${result}.`
