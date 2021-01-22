@@ -1,12 +1,7 @@
 import readLineSync from 'readline-sync';
+import getRandom from '../index.js';
 
 export default () => {
-  const getRandom = (begin, end) => {
-    const min = Math.ceil(begin);
-    const max = Math.floor(end);
-    return Math.floor(Math.random() * (max - min)) + min;
-  };
-
   const greatestCommonDivisor = (number1, number2) => {
     const max = Math.max(number1, number2);
     const min = Math.min(number1, number2);
