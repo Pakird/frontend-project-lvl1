@@ -1,6 +1,5 @@
 import readLineSync from 'readline-sync';
 import getRandom from '../index.js';
-import { gameExecution } from '../index.js';
 
 export default () => {
   console.log('Welcome to the Brain Games!');
@@ -25,7 +24,7 @@ export default () => {
 
     console.log(`Question: ${operation}`);
     const answer = readLineSync.question('Your answer: ');
-    
+
     if (Number(answer) === result) {
       console.log('Correct!');
     } else {
