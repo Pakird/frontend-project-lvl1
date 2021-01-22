@@ -1,9 +1,11 @@
 ### Hexlet tests and linter status:
 
 CodeClimate: [![Maintainability](https://api.codeclimate.com/v1/badges/71b6d146d6420c09482e/maintainability)](https://codeclimate.com/github/Pakird/frontend-project-lvl1/maintainability),
-[![Test Coverage](https://api.codeclimate.com/v1/badges/71b6d146d6420c09482e/test_coverage)](https://codeclimate.com/github/Pakird/frontend-project-lvl1/test_coverage)
 
 GH Actions badge: https://github.com/Pakird/frontend-project-lvl1/workflows/linter/badge.svg;
+
+brain-games.js: <a href="https://asciinema.org/a/rVuNXZ0tu3ONi70R7gRtKWQhD" target="_blank"><img src="https://asciinema.org/a/rVuNXZ0tu3ONi70R7gRtKWQhD.svg" /></a>
+Для использования этой игры необходимо установить пакет командой 'make lint', затем написать в тепминале: 'brain-games'. После завпуска, программа поприветствует Вас на Играх Разума и попросит вписать ваше имя. После этого Вы увидите привествие по имени.
 
 brain-even.js https://asciinema.org/a/p7N7sscThXUKJW96Je9ZG9phI;
 
