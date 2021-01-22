@@ -15,7 +15,7 @@ export default () => {
     if (answer === isEven(randomNum)) {
       console.log('Correct!');
     } else {
-      console.log(`"${answer}" is wrong answer ;(. Correct answer was "${isEven(randomNum)}".`);
+      console.log(`'${answer}' is wrong answer ;(. Correct answer was '${isEven(randomNum)}'.`);
       console.log(`Let's try again, ${name}!`);
       return;
     }

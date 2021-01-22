@@ -27,7 +27,7 @@ export default () => {
     if (answer === isPrime(number)) {
       console.log('Correct!');
     } else {
-      console.log(`"${answer}" is wrong answer ;(. Correct answer was "${isPrime(number)}".`);
+      console.log(`'${answer}' is wrong answer ;(. Correct answer was '${isPrime(number)}'.`);
       console.log(`Let's try again, ${name}!`);
       return;
     }
