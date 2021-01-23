@@ -1,4 +1,4 @@
-export default (begin, end) => {
+export const getRandom = (begin, end) => {
   const min = Math.ceil(begin);
   const max = Math.floor(end);
   return Math.floor(Math.random() * (max - min)) + min;
@@ -7,6 +7,7 @@ export default (begin, end) => {
 export const gameExercusion = (answer, result, name) => {
   if (Number(answer) === result) {
     console.log('Correct!');
+    return true;
   } else {
     console.log(`'${answer}' is wrong answer ;(. Correct answer was '${result}'.`);
     console.log(`Let's try again, ${name}!`);
