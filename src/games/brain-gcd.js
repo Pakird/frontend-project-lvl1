@@ -1,5 +1,5 @@
 import readLineSync from 'readline-sync';
-import { getRandom } from '../index.js';
+import { getRandom, gameExercusion } from '../index.js';
 
 export default () => {
   const greatestCommonDivisor = (number1, number2) => {
@@ -21,11 +21,8 @@ export default () => {
 
     console.log(`Question: ${randomNum1} ${randomNum2}`);
     const answer = readLineSync.question('Your answer: ');
-    if (Number(answer) === gcd) {
-      console.log('Correct!');
-    } else {
-      console.log(`'${answer}' is wrong answer ;(. Correct answer was '${gcd}'.`);
-      console.log(`Let's try again, ${name}!`);
+    const game = gameExercusion(answer, gcd, name);
+    if (game === false) {
       return;
     }
   }

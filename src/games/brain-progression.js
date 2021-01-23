@@ -1,5 +1,5 @@
 import readLineSync from 'readline-sync';
-import { getRandom } from '../index.js';
+import { getRandom, gameExercusion } from '../index.js';
 
 export default () => {
   console.log('Welcome to the Brain Games!');
@@ -20,11 +20,9 @@ export default () => {
 
     console.log(`Question: ${partProgression.join(' ')}`);
     const answer = readLineSync.question('Your answer: ');
-    if (Number(answer) === progression[lostNumber]) {
-      console.log('Correct!');
-    } else {
-      console.log(`'${answer}' is wrong answer ;(. Correct answer was '${progression[lostNumber]}'.`);
-      console.log(`Let's try again, ${name}!`);
+    
+    const game = gameExercusion(answer, progression[lostNumber], name);
+    if (game === false) {
       return;
     }
   }
