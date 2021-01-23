@@ -1,5 +1,5 @@
 import readLineSync from 'readline-sync';
-import { getRandom } from '../index.js';
+import { getRandom, gameExercusion } from '../index.js';
 
 export default () => {
   const isEven = (num) => (num % 2 === 0 ? 'yes' : 'no');
@@ -12,11 +12,8 @@ export default () => {
     const randomNum = getRandom(1, 100);
     console.log(`Question: ${randomNum}`);
     const answer = readLineSync.question('Your answer: ');
-    if (answer === isEven(randomNum)) {
-      console.log('Correct!');
-    } else {
-      console.log(`'${answer}' is wrong answer ;(. Correct answer was '${isEven(randomNum)}'.`);
-      console.log(`Let's try again, ${name}!`);
+    const game = gameExercusion(answer, isEven(randomNum), name);
+    if (game === false) {
       return;
     }
   }

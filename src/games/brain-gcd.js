@@ -21,7 +21,7 @@ export default () => {
 
     console.log(`Question: ${randomNum1} ${randomNum2}`);
     const answer = readLineSync.question('Your answer: ');
-    const game = gameExercusion(answer, gcd, name);
+    const game = gameExercusion(Number(answer), gcd, name);
     if (game === false) {
       return;
     }

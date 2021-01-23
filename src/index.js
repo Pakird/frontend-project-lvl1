@@ -5,7 +5,7 @@ export const getRandom = (begin, end) => {
 };
 
 export const gameExercusion = (answer, result, name) => {
-  if (Number(answer) === result) {
+  if (answer === result) {
     console.log('Correct!');
     return true;
   }

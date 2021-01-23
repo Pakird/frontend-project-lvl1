@@ -17,11 +17,9 @@ export default () => {
     }
     const partProgression = [...progression];
     partProgression[lostNumber] = '..';
-
     console.log(`Question: ${partProgression.join(' ')}`);
     const answer = readLineSync.question('Your answer: ');
-    
-    const game = gameExercusion(answer, progression[lostNumber], name);
+    const game = gameExercusion(Number(answer), progression[lostNumber], name);
     if (game === false) {
       return;
     }

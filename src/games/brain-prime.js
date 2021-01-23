@@ -1,5 +1,5 @@
 import readLineSync from 'readline-sync';
-import { getRandom } from '../index.js';
+import { getRandom, gameExercusion } from '../index.js';
 
 export default () => {
   const isPrime = (number) => {
@@ -23,12 +23,8 @@ export default () => {
     const number = getRandom(1, 200);
     console.log(`Question: ${number}`);
     const answer = readLineSync.question('Your answer: ');
-
-    if (answer === isPrime(number)) {
-      console.log('Correct!');
-    } else {
-      console.log(`'${answer}' is wrong answer ;(. Correct answer was '${isPrime(number)}'.`);
-      console.log(`Let's try again, ${name}!`);
+    const game = gameExercusion(answer, isPrime(number), name);
+    if (game === false) {
       return;
     }
   }

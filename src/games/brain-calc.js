@@ -24,8 +24,7 @@ export default () => {
 
     console.log(`Question: ${operation}`);
     const answer = readLineSync.question('Your answer: ');
-
-    const game = gameExercusion(answer, result, name);
+    const game = gameExercusion(Number(answer), result, name);
     if (game === false) {
       return;
     }
