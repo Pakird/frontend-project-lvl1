@@ -3,6 +3,16 @@ export default (begin, end) => {
   const max = Math.floor(end);
   return Math.floor(Math.random() * (max - min)) + min;
 };
+
+export const gameExercusion = (answer, result, name) => {
+  if (Number(answer) === result) {
+    console.log('Correct!');
+  } else {
+    console.log(`'${answer}' is wrong answer ;(. Correct answer was '${result}'.`);
+    console.log(`Let's try again, ${name}!`);
+    return false;
+  }
+};
 /*
 #!/usr/bin/env node
 import readLineSync from 'readline-sync';
