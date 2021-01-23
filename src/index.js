@@ -8,11 +8,10 @@ export const gameExercusion = (answer, result, name) => {
   if (Number(answer) === result) {
     console.log('Correct!');
     return true;
-  } else {
-    console.log(`'${answer}' is wrong answer ;(. Correct answer was '${result}'.`);
-    console.log(`Let's try again, ${name}!`);
-    return false;
-  }
+  } 
+  console.log(`'${answer}' is wrong answer ;(. Correct answer was '${result}'.`);
+  console.log(`Let's try again, ${name}!`);
+  return false;
 };
 /*
 #!/usr/bin/env node

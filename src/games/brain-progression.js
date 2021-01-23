@@ -1,5 +1,5 @@
 import readLineSync from 'readline-sync';
-import getRandom from '../index.js';
+import { getRandom } from '../index.js';
 
 export default () => {
   console.log('Welcome to the Brain Games!');
