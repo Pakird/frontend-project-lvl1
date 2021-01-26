@@ -9,6 +9,6 @@ jobs:
       - name: repository
         uses: actions/checkout@v2
       - name: install dependences
-        run: make install
+        run: npm install
       - name: linter
         run: make lint
