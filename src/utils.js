@@ -26,7 +26,7 @@ export const isPrime = (number) => {
 };
 
 export const calculateResult = (operator, operand1, operand2) => {
-  const result = 0;
+  let result = 0;
   switch (operator) {
     case '+':
       result = operand1 + operand2;
