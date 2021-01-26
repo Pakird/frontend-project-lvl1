@@ -1,15 +1,13 @@
-import readLineSync from 'readline-sync';
-import { getRandom, gameExercusion } from '../index.js';
+import { executeTheGame, greet, askQuestionTakeAnswer, steps } from '../index.js';
+import { randomOf100, getRandom } from '../utils.js';
 
 export default () => {
-  console.log('Welcome to the Brain Games!');
-  const name = readLineSync.question('May I have your name? ');
-  console.log(`Hello, ${name}!`);
+  const name = greet();
   console.log('What number is missing in the progression?');
 
-  for (let i = 1; i < 4; i += 1) {
+  for (let i = 1; i <= steps; i += 1) {
     const lostNumber = getRandom(0, 10);
-    const firstNumber = getRandom(0, 51);
+    const firstNumber = randomOf100();
     const difference = getRandom(2, 20);
     const progression = [firstNumber];
     for (let j = 1; j < 10; j += 1) {
@@ -17,10 +15,11 @@ export default () => {
     }
     const partProgression = [...progression];
     partProgression[lostNumber] = '..';
-    console.log(`Question: ${partProgression.join(' ')}`);
-    const answer = readLineSync.question('Your answer: ');
-    const game = gameExercusion(Number(answer), progression[lostNumber], name);
-    if (game === false) {
+
+    const answer = askQuestionTakeAnswer(partProgression.join(' '));
+
+    const gameResult = executeTheGame(answer, progression[lostNumber], name);
+    if (!gameResult) {
       return;
     }
   }

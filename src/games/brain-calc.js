@@ -1,31 +1,24 @@
-import readLineSync from 'readline-sync';
-import { getRandom, gameExercusion } from '../index.js';
+import { greet, executeTheGame, steps, askQuestionTakeAnswer } from '../index.js';
+import { randomOf3, randomOf100, calculateResult } from '../utils.js'
 
 export default () => {
-  console.log('Welcome to the Brain Games!');
-  const name = readLineSync.question('May I have your name? ');
-  console.log(`Hello, ${name}!`);
+  const name = greet();
+
   console.log('What is the result of the expression?');
 
-  for (let i = 1; i < 4; i += 1) {
+  for (let i = 1; i <= steps; i += 1) {
     const operators = ['+', '-', '*'];
-    const operator = operators[getRandom(0, 3)];
-    const operand1 = getRandom(1, 100);
-    const operand2 = getRandom(1, 100);
+    const operator = operators[randomOf3()];
+    const operand1 = randomOf100();
+    const operand2 = randomOf100();
     const operation = `${operand1} ${operator} ${operand2}`;
-    let result = '';
-    if (operator === '+') {
-      result = operand1 + operand2;
-    } else if (operator === '-') {
-      result = operand1 - operand2;
-    } else {
-      result = operand1 * operand2;
-    }
 
-    console.log(`Question: ${operation}`);
-    const answer = readLineSync.question('Your answer: ');
-    const game = gameExercusion(Number(answer), result, name);
-    if (game === false) {
+    const result = calculateResult(operator, operand1, operand2);
+
+    const answer = askQuestionTakeAnswer(operation);
+
+    const gameResult = executeTheGame(answer, result, name);
+    if (!gameResult) {
       return;
     }
   }
