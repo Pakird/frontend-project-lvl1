@@ -1,4 +1,6 @@
-import { greet, executeTheGame, askQuestionTakeAnswer, steps } from '../index.js';
+import {
+  greet, executeTheGame, askQuestionTakeAnswer, steps,
+} from '../index.js';
 import { isPrime, randomOf100 } from '../utils.js';
 
 export default () => {

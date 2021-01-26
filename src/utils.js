@@ -30,8 +30,10 @@ export const calculateResult = (operator, operand1, operand2) => {
   switch (operator) {
     case '+':
       result = operand1 + operand2;
+      break;
     case '-':
       result = operand1 - operand2;
+      break;
     default:
       result = operand1 * operand2;
   }

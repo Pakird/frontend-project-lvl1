@@ -1,5 +1,5 @@
-import { 
-  executeTheGame, askQuestionTakeAnswer, greet, steps 
+import {
+  executeTheGame, askQuestionTakeAnswer, greet, steps,
 } from '../index.js';
 
 import { randomOf100, isEven } from '../utils.js';
