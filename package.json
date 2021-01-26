@@ -2,7 +2,7 @@
   "name": "@hexlet/code",
   "type": "module",
   "version": "1.0.0",
-  "description": "[![Actions Status](https://github.com/Pakird/frontend-project-lvl1/workflows/hexlet-check/badge.svg)](https://github.com/Pakird/frontend-project-lvl1/actions)",
+  "description": "This project contains brain-games, such as: brain-calc, brain-progression, brain-even, etc",
   "main": "index.js",
   "bin": {
     "brain-games": "bin/brain-games.js",
