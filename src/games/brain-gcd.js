@@ -1,5 +1,5 @@
 import { executeTheGame, askQuestionTakeAnswer, greet, steps } from '../index.js';
-import { randomOf100, getGreatestCommonDivisor } from  '../utils.js'
+import { randomOf100, getGreatestCommonDivisor } from '../utils.js'
 
 export default () => {
   const name = greet();
