@@ -25,11 +25,11 @@ export const executeTheGame = (answer, result, name) => {
     console.log(`Let's try again, ${name}!`);
     return false;
   }
-    if (Number(answer) === result) {
-      console.log('Correct!');
-      return true;
-    }
-    console.log(`'${answer}' is wrong answer ;(. Correct answer was '${result}'.`);
-    console.log(`Let's try again, ${name}!`);
-    return false;
+  if (Number(answer) === result) {
+    console.log('Correct!');
+    return true;
+  }
+  console.log(`'${answer}' is wrong answer ;(. Correct answer was '${result}'.`);
+  console.log(`Let's try again, ${name}!`);
+  return false;
 };

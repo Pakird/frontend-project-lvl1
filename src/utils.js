@@ -26,14 +26,16 @@ export const isPrime = (number) => {
 };
 
 export const calculateResult = (operator, operand1, operand2) => {
-  switch(operator) {
+  const result = 0;
+  switch (operator) {
     case '+':
-      return operand1 + operand2;
+      result = operand1 + operand2;
     case '-':
-      return operand1 - operand2;
-    case '*':
-      return operand1 * operand2;
+      result = operand1 - operand2;
+    default:
+      result = operand1 * operand2;
   }
+  return result;
 };
 
 export const randomOf100 = () => getRandom(1, 100);
