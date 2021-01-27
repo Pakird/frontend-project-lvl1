@@ -17,10 +17,10 @@ export default () => {
   giveTaskStatement('What number is missing in the progression?');
 
   for (let i = 1; i <= steps; i += 1) {
-    const lostNumber = getRandomNumber(0, 10);
     const firstNumber = getRandomNumber(1, 100);
     const difference = getRandomNumber(2, 20);
     const lengthProgression = getRandomNumber(5, 11);
+    const lostNumber = getRandomNumber(0, lengthProgression);
     const progression = createProgression(difference, firstNumber, lengthProgression);
 
     const partProgression = [...progression];
