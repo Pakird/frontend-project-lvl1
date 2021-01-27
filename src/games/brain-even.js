@@ -4,7 +4,7 @@ import {
 
 import getRandomNumber from '../utils.js';
 
-const isEven = (num) => (num % 2 === 0 ? 'yes' : 'no');
+const isEven = (num) => (num % 2 === 0 ? true : false);
 
 export default () => {
   const name = greet();
@@ -14,8 +14,8 @@ export default () => {
     const randomNum = getRandomNumber(1, 100);
 
     const answer = askQuestionTakeAnswer(randomNum);
-
-    const gameResult = executeGame(answer, isEven(randomNum), name);
+    const getResult = (isEven(randomNum)) ? 'yes' : 'no';
+    const gameResult = executeGame(answer, getResult, name);
     if (!gameResult) {
       return;
     }
