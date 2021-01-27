@@ -2,7 +2,7 @@ import {
   greet, executeTheGame, steps, askQuestionTakeAnswer,
 } from '../index.js';
 
-import { getRandom } from '../utils.js';
+import getRandomNumber from '../utils.js';
 
 const calculateResult = (operator, operand1, operand2) => {
   let result = 0;
@@ -26,9 +26,9 @@ export default () => {
 
   for (let i = 1; i <= steps; i += 1) {
     const operators = ['+', '-', '*'];
-    const operator = operators[getRandom(0, 3)];
-    const operand1 = getRandom(1, 100);
-    const operand2 = getRandom(1, 100);
+    const operator = operators[getRandomNumber(0, 3)];
+    const operand1 = getRandomNumber(1, 100);
+    const operand2 = getRandomNumber(1, 100);
     const operation = `${operand1} ${operator} ${operand2}`;
 
     const result = calculateResult(operator, operand1, operand2);

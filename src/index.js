@@ -33,3 +33,5 @@ export const executeTheGame = (answer, result, name) => {
   console.log(`Let's try again, ${name}!`);
   return false;
 };
+
+export const congratulate = (name) => console.log(`Congratulations, ${name}!`);

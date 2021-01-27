@@ -2,7 +2,7 @@ import {
   greet, executeTheGame, askQuestionTakeAnswer, steps,
 } from '../index.js';
 
-import { getRandom } from '../utils.js';
+import getRandomNumber from '../utils.js';
 
 const isPrime = (number) => {
   if (number < 2) {
@@ -21,7 +21,7 @@ export default () => {
   console.log('Answer "yes" if given number is prime. Otherwise answer "no".');
 
   for (let i = 1; i <= steps; i += 1) {
-    const number = getRandom(1, 100);
+    const number = getRandomNumber(1, 100);
 
     const answer = askQuestionTakeAnswer(number);
 
