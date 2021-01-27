@@ -1,5 +1,5 @@
 import {
-  greet, executeTheGame, askQuestionTakeAnswer, steps,
+  greet, executeGame, askQuestionTakeAnswer, steps,
 } from '../index.js';
 
 import getRandomNumber from '../utils.js';
@@ -25,7 +25,7 @@ export default () => {
 
     const answer = askQuestionTakeAnswer(number);
 
-    const gameResult = executeTheGame(answer, isPrime(number), name);
+    const gameResult = executeGame(answer, isPrime(number), name);
     if (!gameResult) {
       return;
     }

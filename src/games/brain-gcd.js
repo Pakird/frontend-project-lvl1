@@ -1,5 +1,5 @@
 import {
-  executeTheGame, askQuestionTakeAnswer, greet, steps,
+  executeGame, askQuestionTakeAnswer, greet, steps,
 } from '../index.js';
 
 import getRandomNumber from '../utils.js';
@@ -21,7 +21,7 @@ export default () => {
 
     const answer = askQuestionTakeAnswer(`${randomNum1} ${randomNum2}`);
 
-    const gameResult = executeTheGame(Number(answer), gcd, name);
+    const gameResult = executeGame(Number(answer), gcd, name);
     if (!gameResult) {
       return;
     }

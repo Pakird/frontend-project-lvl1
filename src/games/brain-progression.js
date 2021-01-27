@@ -1,5 +1,5 @@
 import {
-  executeTheGame, greet, askQuestionTakeAnswer, steps,
+  executeGame, greet, askQuestionTakeAnswer, steps,
 } from '../index.js';
 
 import getRandomNumber from '../utils.js';
@@ -21,7 +21,7 @@ export default () => {
 
     const answer = askQuestionTakeAnswer(partProgression.join(' '));
 
-    const gameResult = executeTheGame(answer, progression[lostNumber], name);
+    const gameResult = executeGame(Number(answer), progression[lostNumber], name);
     if (!gameResult) {
       return;
     }
