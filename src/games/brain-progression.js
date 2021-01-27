@@ -4,9 +4,9 @@ import {
 
 import getRandomNumber from '../utils.js';
 
-const createProgression = (difference, firstNumber, length) => {
+const createProgression = (difference, firstNumber, lengthProgression) => {
   const progression = [firstNumber];
-  for (let j = 1; j <= length; j += 1) {
+  for (let j = 1; j <= lengthProgression; j += 1) {
     progression[j] = progression[j - 1] + difference;
   }
   return progression;
@@ -20,9 +20,9 @@ export default () => {
     const lostNumber = getRandomNumber(0, 10);
     const firstNumber = getRandomNumber(1, 100);
     const difference = getRandomNumber(2, 20);
-    const length = getRandomNumber(5, 11);
-    const progression = createProgression(difference, firstNumber, length);
-    
+    const lengthProgression = getRandomNumber(5, 11);
+    const progression = createProgression(difference, firstNumber, lengthProgression);
+
     const partProgression = [...progression];
     partProgression[lostNumber] = '..';
 
