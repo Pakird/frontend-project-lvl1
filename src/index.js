@@ -7,6 +7,8 @@ export const greet = () => {
   return name;
 };
 
+export const ask
+
 export const askQuestionTakeAnswer = (question) => {
   console.log(`Question: ${question}`);
   const answer = readLineSync.question('Your answer: ');

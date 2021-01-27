@@ -1,5 +1,5 @@
 import {
-  greet, executeTheGame, steps, askQuestionTakeAnswer, congratulate
+  greet, executeTheGame, steps, askQuestionTakeAnswer, congratulate,
 } from '../index.js';
 
 import getRandomNumber from '../utils.js';
