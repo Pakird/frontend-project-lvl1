@@ -1,5 +1,5 @@
 import {
-  executeGame, askQuestionTakeAnswer, greet, steps,
+  executeGame, askQuestionTakeAnswer, greet, steps, giveTaskStatement, congratulate,
 } from '../index.js';
 
 import getRandomNumber from '../utils.js';
@@ -13,7 +13,7 @@ const getGreatestCommonDivisor = (number1, number2) => {
 
 export default () => {
   const name = greet();
-  console.log('Find the greatest common divisor of given numbers.');
+  giveTaskStatement('Find the greatest common divisor of given numbers.');
   for (let i = 1; i <= steps; i += 1) {
     const randomNum1 = getRandomNumber(1, 100);
     const randomNum2 = getRandomNumber(1, 100);
@@ -26,5 +26,5 @@ export default () => {
       return;
     }
   }
-  console.log(`Congratulations, ${name}!`);
+  congratulate(`Congratulations, ${name}!`);
 };

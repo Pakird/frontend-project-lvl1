@@ -1,5 +1,5 @@
 import {
-  greet, executeGame, askQuestionTakeAnswer, steps,
+  greet, executeGame, askQuestionTakeAnswer, steps, giveTaskStatement, congratulate,
 } from '../index.js';
 
 import getRandomNumber from '../utils.js';
@@ -18,7 +18,7 @@ const isPrime = (number) => {
 
 export default () => {
   const name = greet();
-  console.log('Answer "yes" if given number is prime. Otherwise answer "no".');
+  giveTaskStatement('Answer "yes" if given number is prime. Otherwise answer "no".');
 
   for (let i = 1; i <= steps; i += 1) {
     const number = getRandomNumber(1, 100);
@@ -30,5 +30,5 @@ export default () => {
       return;
     }
   }
-  console.log(`Congratulations, ${name}!`);
+  congratulate(`Congratulations, ${name}!`);
 };

@@ -1,12 +1,12 @@
 import {
-  executeGame, greet, askQuestionTakeAnswer, steps,
+  executeGame, greet, askQuestionTakeAnswer, steps, giveTaskStatement, congratulate,
 } from '../index.js';
 
 import getRandomNumber from '../utils.js';
 
 export default () => {
   const name = greet();
-  console.log('What number is missing in the progression?');
+  giveTaskStatement('What number is missing in the progression?');
 
   for (let i = 1; i <= steps; i += 1) {
     const lostNumber = getRandomNumber(0, 10);
@@ -26,5 +26,5 @@ export default () => {
       return;
     }
   }
-  console.log(`Congratulations, ${name}!`);
+  congratulate(`Congratulations, ${name}!`);
 };
