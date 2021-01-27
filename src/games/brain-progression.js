@@ -4,6 +4,14 @@ import {
 
 import getRandomNumber from '../utils.js';
 
+const createProgression = (difference, firstNumber, length) => {
+  const progression = [firstNumber];
+  for (let j = 1; j <= length; j += 1) {
+    progression[j] = progression[j - 1] + difference;
+  }
+  return progression;
+};
+
 export default () => {
   const name = greet();
   giveTaskStatement('What number is missing in the progression?');
@@ -12,10 +20,9 @@ export default () => {
     const lostNumber = getRandomNumber(0, 10);
     const firstNumber = getRandomNumber(1, 100);
     const difference = getRandomNumber(2, 20);
-    const progression = [firstNumber];
-    for (let j = 1; j < 10; j += 1) {
-      progression[j] = progression[j - 1] + difference;
-    }
+    const length = getRandomNumber(5, 11);
+    const progression = createProgression(difference, firstNumber, length);
+    
     const partProgression = [...progression];
     partProgression[lostNumber] = '..';
 
