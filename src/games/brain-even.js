@@ -4,7 +4,7 @@ import {
 
 import getRandomNumber from '../utils.js';
 
-const isEven = (num) => (num % 2 === 0 ? true : false);
+const isEven = (num) => (num % 2 === 0);
 
 export default () => {
   const name = greet();
