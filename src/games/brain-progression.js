@@ -1,7 +1,8 @@
 import {
   executeTheGame, greet, askQuestionTakeAnswer, steps,
 } from '../index.js';
-import { randomOf100, getRandom } from '../utils.js';
+
+import { getRandom } from '../utils.js';
 
 export default () => {
   const name = greet();
@@ -9,7 +10,7 @@ export default () => {
 
   for (let i = 1; i <= steps; i += 1) {
     const lostNumber = getRandom(0, 10);
-    const firstNumber = randomOf100();
+    const firstNumber = getRandom(1, 100);
     const difference = getRandom(2, 20);
     const progression = [firstNumber];
     for (let j = 1; j < 10; j += 1) {
