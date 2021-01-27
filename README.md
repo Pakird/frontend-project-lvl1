@@ -1,7 +1,6 @@
 ### Hexlet tests and linter status:
 
-CodeClimate: [![Maintainability](https://api.codeclimate.com/v1/badges/71b6d146d6420c09482e/maintainability)](https://codeclimate.com/github/Pakird/frontend-project-lvl1/maintainability),
-
+[![Maintainability](https://api.codeclimate.com/v1/badges/71b6d146d6420c09482e/maintainability)](https://codeclimate.com/github/Pakird/frontend-project-lvl1/maintainability)
 ![hexlet-check](https://github.com/Pakird/frontend-project-lvl1/workflows/hexlet-check/badge.svg)
 ![linter](https://github.com/Pakird/frontend-project-lvl1/workflows/linter/badge.svg)
 
