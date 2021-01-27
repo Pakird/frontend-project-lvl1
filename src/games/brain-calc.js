@@ -1,5 +1,5 @@
 import {
-  greet, executeTheGame, steps, askQuestionTakeAnswer,
+  greet, executeTheGame, steps, askQuestionTakeAnswer, congratulate
 } from '../index.js';
 
 import getRandomNumber from '../utils.js';
@@ -40,5 +40,5 @@ export default () => {
       return;
     }
   }
-  console.log(`Congratulations, ${name}!`);
+  congratulate(name);
 };
