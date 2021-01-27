@@ -7,7 +7,7 @@ export const greet = () => {
   return name;
 };
 
-export const ask
+export const giveTaskStatement = (statement) => console.log(statement);
 
 export const askQuestionTakeAnswer = (question) => {
   console.log(`Question: ${question}`);

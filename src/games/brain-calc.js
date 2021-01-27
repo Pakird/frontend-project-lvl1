@@ -1,5 +1,5 @@
 import {
-  greet, executeTheGame, steps, askQuestionTakeAnswer, congratulate,
+  greet, executeTheGame, steps, askQuestionTakeAnswer, congratulate, giveTaskStatement,
 } from '../index.js';
 
 import getRandomNumber from '../utils.js';
@@ -22,7 +22,7 @@ const calculateResult = (operator, operand1, operand2) => {
 export default () => {
   const name = greet();
 
-  console.log('What is the result of the expression?');
+  giveTaskStatement('What is the result of the expression?');
 
   for (let i = 1; i <= steps; i += 1) {
     const operators = ['+', '-', '*'];
