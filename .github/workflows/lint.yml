@@ -10,5 +10,7 @@ jobs:
         uses: actions/checkout@v2
       - name: install dependences
         run: npm install
+      - name: check node version
+        run: node -v
       - name: linter
         run: make lint
