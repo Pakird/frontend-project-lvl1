@@ -21,10 +21,10 @@ export const executeGame = (answer, result, name) => {
   if (answer === result) {
     console.log('Correct!');
     return true;
-    }
+  }
   console.log(`'${answer}' is wrong answer ;(. Correct answer was '${result}'.`);
   console.log(`Let's try again, ${name}!`);
-  return false;  
+  return false;
 };
 
 export const congratulate = (name) => console.log(`Congratulations, ${name}!`);
