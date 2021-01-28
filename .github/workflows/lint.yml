@@ -15,6 +15,6 @@ jobs:
       - name: check node version
         run: node -v
       - name: install dependences
-        run: npm install
+        run: make install
       - name: linter
         run: make lint
