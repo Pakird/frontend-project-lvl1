@@ -1,4 +1,4 @@
-import {
+/*import {
   greet, executeGame, steps, askQuestionTakeAnswer, congratulate, giveTaskStatement,
 } from '../index.js';
 
@@ -41,4 +41,37 @@ export default () => {
     }
   }
   congratulate(name);
+};
+*/
+import getRandomNumber from '../utils.js';
+
+export const getRandomInput = () => {
+  const operators = ['+', '-', '*'];
+  const operator = operators[getRandomNumber(0, operators.length)];
+  const operand1 = getRandomNumber(1, 100);
+  const operand2 = getRandomNumber(1, 100);
+  return [operand1, operator, operand2];
+};
+export let input = getRandomInput();
+
+export const statement = 'What is the result of the expression?';
+
+export const calculateResult = (input) => {
+  const [operand1, operator, operand2] = input;
+  let result;
+    switch (operator) {
+      case '+':
+        result = operand1 + operand2;
+        break;
+      case '-':
+        result = operand1 - operand2;
+        break;
+      case '*':
+        result = operand1 * operand2;
+    }
+  return result;
+};
+export const operation = (input) => {
+  const [operand1, operator, operand2] = input;
+  return `${operand1} ${operator} ${operand2}`;
 };

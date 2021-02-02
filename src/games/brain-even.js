@@ -1,5 +1,5 @@
 import {
-  executeGame, askQuestionTakeAnswer, greet, steps, giveTaskStatement, congratulate,
+  executeGame, askQuestionTakeAnswer, greet, steps, congratulate,
 } from '../index.js';
 
 import getRandomNumber from '../utils.js';
@@ -8,7 +8,7 @@ const isEven = (num) => (num % 2 === 0);
 
 export default () => {
   const name = greet();
-  giveTaskStatement('Answer "yes" if the number is even, otherwise answer "no".');
+  console.log('Answer "yes" if the number is even, otherwise answer "no".');
 
   for (let i = 1; i <= steps; i += 1) {
     const randomNum = getRandomNumber(1, 100);
