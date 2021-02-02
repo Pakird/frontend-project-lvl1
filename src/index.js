@@ -1,6 +1,4 @@
-
 import readLineSync from 'readline-sync';
-import { getRandomInput } from './games/brain-calc.js';
 
 export const greet = () => {
   console.log('Welcome to the Brain Games!');
@@ -10,14 +8,14 @@ export const greet = () => {
 };
 
 export const askQuestionTakeAnswer = (question) => {
-  console.log(`Question: ${question}`);
+  console.log(` Question: ${question}`);
   const answer = readLineSync.question('Your answer: ');
   return answer;
 };
 
 export const steps = 3;
 
-/*export const executeGame = (answer, result, name) => {
+/* export const executeGame = (answer, result, name) => {
   if (answer === result) {
     console.log('Correct!');
     return true;
@@ -29,7 +27,7 @@ export const steps = 3;
 */
 export const executeGame = (answer, result) => answer === result || Number(answer) === result;
 
-export default (statement, question, result, input) => {
+export default (statement, question, result, input, getRandomInput) => {
   const name = greet();
   console.log(statement);
   for (let i = 1; i <= steps; i += 1) {
