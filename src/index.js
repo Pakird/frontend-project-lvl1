@@ -29,18 +29,19 @@ export const executeGame = (answer, result) => answer === result || Number(answe
 
 export default (statement, question, result, input, getRandomInput) => {
   const name = greet();
+  let inputData = input;
   console.log(statement);
   for (let i = 1; i <= steps; i += 1) {
-    const answer = askQuestionTakeAnswer(question(input));
+    const answer = askQuestionTakeAnswer(question(inputData));
 
-    const gameResult = executeGame(answer, result(input));
+    const gameResult = executeGame(answer, result(inputData));
     if (!gameResult) {
-      console.log(`'${answer}' is wrong answer ;(. Correct answer was '${result(input)}'.`);
+      console.log(`'${answer}' is wrong answer ;(. Correct answer was '${result(inputData)}'.`);
       console.log(`Let's try again, ${name}!`);
       return;
     }
     console.log('Correct!');
-    input = getRandomInput();
+    inputData = getRandomInput();
   }
   console.log(`Congratulations, ${name}!`);
 };
