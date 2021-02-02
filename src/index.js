@@ -1,4 +1,6 @@
+
 import readLineSync from 'readline-sync';
+import { getRandomInput } from './games/brain-calc.js';
 
 export const greet = () => {
   console.log('Welcome to the Brain Games!');
@@ -6,8 +8,6 @@ export const greet = () => {
   console.log(`Hello, ${name}!`);
   return name;
 };
-
-export const giveTaskStatement = (statement) => console.log(statement);
 
 export const askQuestionTakeAnswer = (question) => {
   console.log(`Question: ${question}`);
@@ -17,7 +17,7 @@ export const askQuestionTakeAnswer = (question) => {
 
 export const steps = 3;
 
-export const executeGame = (answer, result, name) => {
+/*export const executeGame = (answer, result, name) => {
   if (answer === result) {
     console.log('Correct!');
     return true;
@@ -26,5 +26,23 @@ export const executeGame = (answer, result, name) => {
   console.log(`Let's try again, ${name}!`);
   return false;
 };
+*/
+export const executeGame = (answer, result) => answer === result || Number(answer) === result;
 
-export const congratulate = (name) => console.log(`Congratulations, ${name}!`);
+export default (statement, question, result, input) => {
+  const name = greet();
+  console.log(statement);
+  for (let i = 1; i <= steps; i += 1) {
+    const answer = askQuestionTakeAnswer(question(input));
+
+    const gameResult = executeGame(answer, result(input));
+    if (!gameResult) {
+      console.log(`'${answer}' is wrong answer ;(. Correct answer was '${result(input)}'.`);
+      console.log(`Let's try again, ${name}!`);
+      return;
+    }
+    console.log('Correct!');
+    input = getRandomInput();
+  }
+  console.log(`Congratulations, ${name}!`);
+};
