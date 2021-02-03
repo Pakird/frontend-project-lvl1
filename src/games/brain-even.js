@@ -15,10 +15,10 @@ import getRandomNumber from '../utils.js';
   }
   congratulate(`Congratulations, ${name}!`);
 };
-*/ 
+*/
+export const input = getRandomNumber(1, 100);
 const isEven = (input) => (input % 2 === 0);
 export const statement = 'Answer "yes" if the number is even, otherwise answer "no".';
-export const input = getRandomNumber(1, 100);
 export const getRandomInput = () => getRandomNumber(1, 100);
 export const showInput = (input) => `${input}`;
 export const getResult = (input) => (isEven(input) ? 'yes' : 'no');
