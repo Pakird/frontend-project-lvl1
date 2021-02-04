@@ -1,10 +1,10 @@
 import getRandomNumber from '../utils.js';
 
 const createProgression = ([difference, firstNumber, lengthProgression]) => {
-  const progression = [firstNumber];
+  const progression = [];
   const lostNumber = getRandomNumber(0, lengthProgression);
-  for (let j = 1; j <= lengthProgression; j += 1) {
-    progression[j] = progression[j - 1] + difference;
+  for (let j = 0; j <= lengthProgression; j += 1) {
+    progression[j] = firstNumber + difference * j;
   }
   return [progression, lostNumber];
 };

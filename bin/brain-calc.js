@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 import {
-  operation,
+  showOperation,
   calculateResult,
   statement,
   input,
@@ -9,4 +9,4 @@ import {
 
 import runGame from '../src/index.js';
 
-runGame(statement, operation, calculateResult, input, getRandomInput);
+runGame(statement, showOperation, calculateResult, input, getRandomInput);

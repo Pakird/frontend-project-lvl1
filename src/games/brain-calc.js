@@ -11,8 +11,7 @@ export const input = getRandomInput();
 
 export const statement = 'What is the result of the expression?';
 
-export const calculateResult = (inputData) => {
-  const [operand1, operator, operand2] = inputData;
+export const calculateResult = ([operand1, operator, operand2]) => {
   let result;
   switch (operator) {
     case '+':
@@ -28,7 +27,4 @@ export const calculateResult = (inputData) => {
   }
   return result;
 };
-export const operation = (inputData) => {
-  const [operand1, operator, operand2] = inputData;
-  return `${operand1} ${operator} ${operand2}`;
-};
+export const showOperation = ([operand1, operator, operand2]) => `${operand1} ${operator} ${operand2}`;
