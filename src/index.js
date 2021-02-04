@@ -15,16 +15,6 @@ export const askQuestionTakeAnswer = (question) => {
 
 export const steps = 3;
 
-/* export const executeGame = (answer, result, name) => {
-  if (answer === result) {
-    console.log('Correct!');
-    return true;
-  }
-  console.log(`'${answer}' is wrong answer ;(. Correct answer was '${result}'.`);
-  console.log(`Let's try again, ${name}!`);
-  return false;
-};
-*/
 export const executeGame = (answer, result) => answer === result || Number(answer) === result;
 
 export default (statement, question, result, input, getRandomInput) => {
