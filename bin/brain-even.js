@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 import runGame from '../src/index.js';
 
-import { 
+import {
   statement,
   showInput,
   getResult,
