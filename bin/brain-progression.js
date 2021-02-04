@@ -1,4 +1,11 @@
 #!/usr/bin/env node
-import runGame from '../src/games/brain-progression.js';
+import runGame from '../src/index.js';
+import {
+  input,
+  getRandomInput,
+  showProgression,
+  checkLostNumber,
+  statement
+} from '../src/games/brain-progression.js';
 
-runGame();
+runGame(statement, showProgression, checkLostNumber, input, getRandomInput);

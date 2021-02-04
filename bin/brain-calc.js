@@ -1,5 +1,10 @@
 #!/usr/bin/env node
-import { operation, calculateResult, statement, input, getRandomInput,
+import {
+  operation,
+  calculateResult,
+  statement,
+  input,
+  getRandomInput,
 } from '../src/games/brain-calc.js';
 
 import runGame from '../src/index.js';

@@ -1,4 +1,11 @@
 #!/usr/bin/env node
-import runGame from '../src/games/brain-gcd.js';
+import {
+  getGreatestCommonDivisor,
+  getRandomInput,
+  input,
+  showNumbers,
+  statement,
+} from '../src/games/brain-gcd.js';
+import runGame from '../src/index.js';
 
-runGame();
+runGame(statement, showNumbers, getGreatestCommonDivisor, input, getRandomInput);
