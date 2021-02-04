@@ -13,12 +13,12 @@ const createProgression = (inputData) => {
 export const input = createProgression([
   getRandomNumber(2, 20),
   getRandomNumber(1, 100),
-  getRandomNumber(5, 11)
+  getRandomNumber(5, 11),
 ]);
 export const getRandomInput = () => createProgression([
   getRandomNumber(2, 20),
   getRandomNumber(1, 100),
-  getRandomNumber(5, 11)
+  getRandomNumber(5, 11),
 ]);
 
 export const statement = 'What number is missing in the progression?';

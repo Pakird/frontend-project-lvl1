@@ -68,6 +68,7 @@ export const calculateResult = (inputData) => {
       break;
     case '*':
       result = operand1 * operand2;
+      break;
     default:
   }
   return result;
