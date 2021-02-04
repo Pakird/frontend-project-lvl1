@@ -1,7 +1,6 @@
 import getRandomNumber from '../utils.js';
 
-const createProgression = (inputData) => {
-  const [difference, firstNumber, lengthProgression] = inputData;
+const createProgression = ([difference, firstNumber, lengthProgression]) => {
   const progression = [firstNumber];
   const lostNumber = getRandomNumber(0, lengthProgression);
   for (let j = 1; j <= lengthProgression; j += 1) {
@@ -23,14 +22,10 @@ export const getRandomInput = () => createProgression([
 
 export const statement = 'What number is missing in the progression?';
 
-export const showProgression = (inputData) => {
-  const [progression, lostNumber] = inputData;
+export const showProgression = ([progression, lostNumber]) => {
   const secretProgression = [...progression];
   secretProgression[lostNumber] = '..';
   return `${secretProgression.join(' ')}`;
 };
 
-export const checkLostNumber = (inputData) => {
-  const [progression, lostNumber] = inputData;
-  return progression[lostNumber];
-};
+export const giveLostNumber = ([progression, lostNumber]) => progression[lostNumber];

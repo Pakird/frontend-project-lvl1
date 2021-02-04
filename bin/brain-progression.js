@@ -4,8 +4,8 @@ import {
   input,
   getRandomInput,
   showProgression,
-  checkLostNumber,
+  giveLostNumber,
   statement,
 } from '../src/games/brain-progression.js';
 
-runGame(statement, showProgression, checkLostNumber, input, getRandomInput);
+runGame(statement, showProgression, giveLostNumber, input, getRandomInput);
