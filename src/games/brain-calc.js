@@ -1,5 +1,7 @@
 import getRandomNumber from '../utils.js';
 
+import runGame from '../index.js';
+
 export const getRandomInput = () => {
   const operators = ['+', '-', '*'];
   const operator = operators[getRandomNumber(0, operators.length)];
@@ -28,3 +30,5 @@ export const calculateResult = ([operand1, operator, operand2]) => {
   return result;
 };
 export const showOperation = ([operand1, operator, operand2]) => `${operand1} ${operator} ${operand2}`;
+
+export default () => runGame(statement, showOperation, calculateResult, input, getRandomInput);
