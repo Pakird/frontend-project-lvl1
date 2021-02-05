@@ -1,5 +1,7 @@
 import getRandomNumber from '../utils.js';
 
+import runGame from '../index.js';
+
 const createProgression = ([difference, firstNumber, progressionLength]) => {
   const progression = [];
   const lostNumber = getRandomNumber(0, progressionLength);
@@ -29,3 +31,5 @@ export const showProgression = ([progression, lostNumber]) => {
 };
 
 export const giveLostNumber = ([progression, lostNumber]) => progression[lostNumber];
+
+export default () => runGame(statement, showProgression, giveLostNumber, input, getRandomInput);

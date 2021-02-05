@@ -1,12 +1,4 @@
 #!/usr/bin/env node
-import runGame from '../src/index.js';
+import runGame from '../src/games/brain-prime.js';
 
-import {
-  checkResult,
-  getRandomInput,
-  input,
-  showNumber,
-  statement,
-} from '../src/games/brain-prime.js';
-
-runGame(statement, showNumber, checkResult, input, getRandomInput);
+runGame();
