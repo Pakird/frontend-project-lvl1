@@ -9,32 +9,6 @@ const createProgression = ([difference, firstNumber, progressionLength]) => {
   }
   return progression;
 };
-/*
-export const input = createProgression([
-  getRandomNumber(2, 20),
-  getRandomNumber(1, 100),
-  getRandomNumber(5, 11),
-]);
-export const getRandomInput = () => createProgression([
-  getRandomNumber(2, 20),
-  getRandomNumber(1, 100),
-  getRandomNumber(5, 11),
-]);
-
-export const statement = 'What number is missing in the progression?';
-
-export const showProgression = ([progression, lostNumber]) => {
-  const secretProgression = [...progression];
-  secretProgression[lostNumber] = '..';
-  return `${secretProgression.join(' ')}`;
-};
-
-export const giveLostNumber = ([progression, lostNumber]) => progression[lostNumber];
-
-export default () => runGame(statement, showProgression, giveLostNumber, input, getRandomInput);
-*/
-
-export default () => runGame(runBrainProgression, description);
 
 const description = 'What number is missing in the progression?';
 
@@ -47,8 +21,10 @@ const runBrainProgression = () => {
   const progression = createProgression([difference, firstNumber, progressionLength])
   const secretProgression = [...progression];
   secretProgression[lostNumber] = '..';
-  outputObj['showOperation'] = `${secretProgression.join(' ')}`;
+  outputObj["showOperation"] = `${secretProgression.join(' ')}`;
   const result = progression[lostNumber];
-  outputObj['calculateResult'] = result;
+  outputObj["calculateResult"] = result;
   return outputObj;
 };
+
+export default () => runGame(runBrainProgression, description);
