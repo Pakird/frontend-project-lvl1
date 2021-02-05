@@ -22,8 +22,8 @@ const runBrainCalc = () => {
       break;
     default:
   }
-  outputObj["showOperation"] = `${operand1} ${operator} ${operand2}`;
-  outputObj["calculateResult"] = result;
+  outputObj.showOperation = `${operand1} ${operator} ${operand2}`;
+  outputObj.calculateResult = result;
   return outputObj;
 };
 

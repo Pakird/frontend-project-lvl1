@@ -10,9 +10,9 @@ const runBrainGCD = () => {
   const outputObj = {};
   const number1 = getRandomNumber(1, 100);
   const number2 = getRandomNumber(1, 100);
-  outputObj["showOperation"] = `${number1} ${number2}`;
+  outputObj.showOperation = `${number1} ${number2}`;
   const result = gCD([number1, number2]);
-  outputObj["calculateResult"] = result;
+  outputObj.calculateResult = result;
   return outputObj;
 };
 

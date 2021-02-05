@@ -21,9 +21,9 @@ const runBrainProgression = () => {
   const progression = createProgression([difference, firstNumber, progressionLength])
   const secretProgression = [...progression];
   secretProgression[lostNumber] = '..';
-  outputObj["showOperation"] = `${secretProgression.join(' ')}`;
+  outputObj.showOperation = `${secretProgression.join(' ')}`;
   const result = progression[lostNumber];
-  outputObj["calculateResult"] = result;
+  outputObj.calculateResult = result;
   return outputObj;
 };
 

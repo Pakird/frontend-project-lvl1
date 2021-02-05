@@ -9,9 +9,9 @@ const description = 'Answer "yes" if the number is even, otherwise answer "no".'
 const runBrainEven = () => {
   const outputObj = {};
   const number = getRandomNumber(1, 100);
-  outputObj["showOperation"] = `${number}`;
-  const result = isEven(number) ? 'yes' : 'no'
-  outputObj["calculateResult"] = result;
+  outputObj.showOperation = `${number}`;
+  const result = isEven(number) ? 'yes' : 'no';
+  outputObj.calculateResult = result;
   return outputObj;
 };
 
