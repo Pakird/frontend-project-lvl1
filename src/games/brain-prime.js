@@ -13,13 +13,26 @@ const isPrime = (number) => {
   }
   return true;
 };
-
+/*
 export const input = getRandomNumber(1, 100);
 export const getRandomInput = () => getRandomNumber(1, 100);
 
-export const statement = 'Answer "yes" if given number is prime. Otherwise answer "no".';
+const statement = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 export const showNumber = (inputData) => `${inputData}`;
 
 export const checkResult = (inputData) => (isPrime(inputData) ? 'yes' : 'no');
 
 export default () => runGame(statement, showNumber, checkResult, input, getRandomInput);
+*/
+export default () => runGame(runBrainPrime, description);
+
+const description = 'Answer "yes" if given number is prime. Otherwise answer "no".';
+
+const runBrainPrime = () => {
+  const outputObj = {};
+  const number = getRandomNumber(1, 100);
+  outputObj['showOperation'] = `${number}`;
+  const result = isPrime(number) ? 'yes' : 'no';
+  outputObj['calculateResult'] = result;
+  return outputObj;
+};
