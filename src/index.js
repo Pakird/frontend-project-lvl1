@@ -12,7 +12,7 @@ export default (game, description) => {
     console.log(` Question: ${copyObject.showOperation}`);
     const answer = readLineSync.question('Your answer: ');
 
-    const gameResult = (answer === copyObject["calculateResult"] || Number(answer) === copyObject.calculateResult);
+    const gameResult = (answer === copyObject.calculateResult || Number(answer) === copyObject.calculateResult);
     if (!gameResult) {
       console.log(`'${answer}' is wrong answer ;(. Correct answer was '${copyObject.calculateResult}'.`);
       console.log(`Let's try again, ${name}!`);
