@@ -1,5 +1,4 @@
 import getRandomNumber from '../utils.js';
-
 import runGame from '../index.js';
 
 const isPrime = (number) => {
@@ -17,12 +16,11 @@ const isPrime = (number) => {
 const description = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 
 const runBrainPrime = () => {
-  const outputObj = {};
   const number = getRandomNumber(1, 100);
-  outputObj.showOperation = `${number}`;
+  const question = `${number}`;
   const result = isPrime(number) ? 'yes' : 'no';
-  outputObj.calculateResult = result;
-  return outputObj;
+  const answer = result;
+  return { question, answer };
 };
 
 export default () => runGame(runBrainPrime, description);

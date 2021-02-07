@@ -1,5 +1,4 @@
 import getRandomNumber from '../utils.js';
-
 import runGame from '../index.js';
 
 const createProgression = ([difference, firstNumber, progressionLength]) => {
@@ -13,7 +12,6 @@ const createProgression = ([difference, firstNumber, progressionLength]) => {
 const description = 'What number is missing in the progression?';
 
 const runBrainProgression = () => {
-  const outputObj = {};
   const difference = getRandomNumber(2, 20);
   const firstNumber = getRandomNumber(1, 100);
   const progressionLength = getRandomNumber(5, 11);
@@ -21,10 +19,10 @@ const runBrainProgression = () => {
   const progression = createProgression([difference, firstNumber, progressionLength]);
   const secretProgression = [...progression];
   secretProgression[lostNumber] = '..';
-  outputObj.showOperation = `${secretProgression.join(' ')}`;
+  const question = `${secretProgression.join(' ')}`;
   const result = progression[lostNumber];
-  outputObj.calculateResult = result;
-  return outputObj;
+  const answer = result;
+  return { question, answer };
 };
 
 export default () => runGame(runBrainProgression, description);
