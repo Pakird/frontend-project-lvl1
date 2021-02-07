@@ -1,21 +1,21 @@
 import readLineSync from 'readline-sync';
 
-export default (game, description) => {
+export default (getGameData, description) => {
   const roundsCount = 3;
   console.log('Welcome to the Brain Games!');
   const name = readLineSync.question('May I have your name? ');
   console.log(`Hello, ${name}!`);
   console.log(description);
   for (let i = 0; i < roundsCount; i += 1) {
-    const copyObject = { ...game() };
+    const { question, answer } = getGameData();
 
-    console.log(` Question: ${copyObject.question}`);
-    const answer = readLineSync.question('Your answer: ');
+    console.log(` Question: ${question}`);
+    const userAnswer = readLineSync.question('Your answer: ');
 
-    const gameResult = (answer === copyObject.answer
-      || Number(answer) === copyObject.answer);
+    const gameResult = (userAnswer === answer
+      || Number(userAnswer) === answer);
     if (!gameResult) {
-      console.log(`'${answer}' is wrong answer ;(. Correct answer was '${copyObject.answer}'.`);
+      console.log(`'${userAnswer}' is wrong answer ;(. Correct answer was '${answer}'.`);
       console.log(`Let's try again, ${name}!`);
       return;
     }
