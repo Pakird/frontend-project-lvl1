@@ -18,8 +18,7 @@ const description = 'Answer "yes" if given number is prime. Otherwise answer "no
 const runBrainPrime = () => {
   const number = getRandomNumber(1, 100);
   const question = `${number}`;
-  const result = isPrime(number) ? 'yes' : 'no';
-  const answer = result;
+  const answer = isPrime(number) ? 'yes' : 'no';
   return { question, answer };
 };
 

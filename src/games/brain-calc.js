@@ -7,21 +7,20 @@ const runBrainCalc = () => {
   const operator = operators[getRandomNumber(0, operators.length)];
   const operand1 = getRandomNumber(1, 100);
   const operand2 = getRandomNumber(1, 100);
-  let result;
+  let answer;
   switch (operator) {
     case '+':
-      result = operand1 + operand2;
+      answer = operand1 + operand2;
       break;
     case '-':
-      result = operand1 - operand2;
+      answer = operand1 - operand2;
       break;
     case '*':
-      result = operand1 * operand2;
+      answer = operand1 * operand2;
       break;
     default:
   }
   const question = `${operand1} ${operator} ${operand2}`;
-  const answer = result;
   return { question, answer };
 };
 

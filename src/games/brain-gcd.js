@@ -9,8 +9,7 @@ const runBrainGCD = () => {
   const number1 = getRandomNumber(1, 100);
   const number2 = getRandomNumber(1, 100);
   const question = `${number1} ${number2}`;
-  const result = gCD([number1, number2]);
-  const answer = result;
+  const answer = gCD([number1, number2]);
   return { question, answer };
 };
 

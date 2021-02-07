@@ -8,8 +8,7 @@ const description = 'Answer "yes" if the number is even, otherwise answer "no".'
 const runBrainEven = () => {
   const number = getRandomNumber(1, 100);
   const question = `${number}`;
-  const result = isEven(number) ? 'yes' : 'no';
-  const answer = result;
+  const answer = isEven(number) ? 'yes' : 'no';
   return { question, answer };
 };
 
