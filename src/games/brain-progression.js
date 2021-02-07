@@ -20,7 +20,7 @@ const runBrainProgression = () => {
   const secretProgression = [...progression];
   secretProgression[lostNumber] = '..';
   const question = `${secretProgression.join(' ')}`;
-  const answer = resprogression[lostNumber];
+  const answer = progression[lostNumber];
   return { question, answer };
 };
 
