@@ -1,5 +1,6 @@
 import getRandomNumber from '../utils.js';
 import runGame from '../index.js';
+
 const getAnswer = (operand1, operator, operand2) => {
   let answer;
   switch (operator) {
