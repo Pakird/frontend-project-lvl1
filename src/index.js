@@ -12,9 +12,7 @@ export default (getGameData, description) => {
     console.log(` Question: ${question}`);
     const userAnswer = readLineSync.question('Your answer: ');
 
-    const gameResult = (userAnswer === answer
-      || Number(userAnswer) === answer);
-    if (!gameResult) {
+    if (userAnswer !== answer) {
       console.log(`'${userAnswer}' is wrong answer ;(. Correct answer was '${answer}'.`);
       console.log(`Let's try again, ${name}!`);
       return;
