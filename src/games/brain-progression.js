@@ -1,4 +1,4 @@
-import getRandomNumber from '../utils.js';
+import { getRandomNumber } from '../utils.js';
 import runGame from '../index.js';
 
 const createProgression = (difference, firstNumber, progressionLength) => {

@@ -1,4 +1,4 @@
-import getRandomNumber from '../utils.js';
+import { runPredicateFunc } from '../utils.js';
 import runGame from '../index.js';
 
 const isPrime = (number) => {
@@ -15,10 +15,6 @@ const isPrime = (number) => {
 
 const description = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 
-const runBrainPrime = () => {
-  const question = getRandomNumber(1, 100);
-  const answer = isPrime(question) ? 'yes' : 'no';
-  return { question, answer };
-};
+const runBrainPrime = () => runPredicateFunc(isPrime);
 
 export default () => runGame(runBrainPrime, description);
